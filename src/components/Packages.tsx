@@ -7,25 +7,25 @@ import { INSTAGRAM_URL } from "@/lib/constants";
 const packs = [
   {
     name: "UNITÁRIA",
-    price: "R$19,90",
+    price: "R$ 9,90",
     featured: false,
     items: ["1 arte", "HD", "Nome personalizado"],
   },
   {
     name: "PACK WARRIOR",
-    price: "R$49,90",
+    price: "R$ 24,90",
     featured: true,
     items: ["3 artes", "Cenários diferentes", "Hero Aura"],
   },
   {
     name: "PACK HERO",
-    price: "R$69,90",
+    price: "R$ 39,90",
     featured: false,
     items: ["5 artes", "Prioridade", "Wallpaper"],
   },
   {
     name: "PACK LEGEND",
-    price: "R$119,90",
+    price: "R$ 69,90",
     featured: false,
     items: ["10 artes", "Clã completo", "Alta resolução"],
   },
@@ -34,8 +34,16 @@ const packs = [
 export function Packages() {
   return (
     <section id="pacotes" className="relative z-20 px-5 py-24 md:px-8">
-      <FadeIn className="mx-auto mb-14 max-w-7xl text-center">
+      <FadeIn className="mx-auto mb-10 max-w-7xl text-center">
         <h2 className="font-cinzel text-3xl md:text-5xl">Escolha seu pacote</h2>
+      </FadeIn>
+      <FadeIn className="mx-auto mb-10 max-w-7xl text-center" delay={0.06}>
+        <p className="text-xs font-semibold uppercase tracking-[0.4em] text-primary">
+          PREÇOS DE LANÇAMENTO
+        </p>
+        <p className="mt-3 text-sm text-white/70 md:text-base">
+          Valores especiais por tempo limitado.
+        </p>
       </FadeIn>
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
         {packs.map((pack, index) => (
