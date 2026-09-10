@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-white font-rajdhani antialiased;
+}
+
+::selection {
+  background: rgba(255, 45, 143, 0.35);
+  color: #fff;
+}
+
+.glass {
+  background: rgba(17, 17, 19, 0.62);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.neon-border {
+  box-shadow:
+    0 0 0 1px rgba(255, 45, 143, 0.35),
+    0 0 28px rgba(255, 45, 143, 0.16),
+    inset 0 0 24px rgba(91, 231, 255, 0.05);
+}
+
+.neon-border-cyan {
+  box-shadow:
+    0 0 0 1px rgba(91, 231, 255, 0.35),
+    0 0 28px rgba(91, 231, 255, 0.16);
+}
+
+.btn-neon {
+  cursor: url("/cursor-neon.svg") 12 12, pointer;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    filter 220ms ease;
+}
+
+.btn-neon:hover {
+  transform: translateY(-1px) scale(1.02);
+  filter: brightness(1.08);
+}
+
+.btn-neon:active {
+  transform: translateY(0) scale(0.99);
+}
+
+@keyframes aurora {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate3d(2%, -2%, 0) scale(1.05);
+  }
+}
+
+.aurora {
+  animation: aurora 12s ease-in-out infinite;
+}
